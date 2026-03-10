@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto Sec | Tintorería Premium en Cádiz</title>
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Nav -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="IMG/Gemini_Generated_Image_swppp7swppp7swpp.png" alt="Punto Sec Logo" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link" data-i18n="nav_services">Servicios</a></li>
+                    <li><a href="#resenas" class="nav-link" data-i18n="nav_reviews">Reseñas</a></li>
+                    <li><a href="#horario" class="nav-link" data-i18n="nav_location">Horario y Ubicación</a></li>
+                    <li><a href="#contacto" class="nav-btn" data-i18n="nav_contact">Contacto</a></li>
+                    <li class="custom-dropdown-container" id="lang-dropdown">
+                        <button class="custom-dropdown-btn" aria-haspopup="listbox" aria-expanded="false"
+                            id="lang-dropdown-btn">
+                            <span class="lang-text">ES</span> <span class="lang-icon">🇪🇸</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </button>
+                        <ul class="custom-dropdown-menu" role="listbox" aria-labelledby="lang-dropdown-btn"
+                            id="lang-dropdown-menu">
+                            <li class="custom-dropdown-item active" role="option" aria-selected="true" data-value="es">
+                                <span class="lang-text-item">ES</span> <span class="lang-icon">🇪🇸</span>
+                            </li>
+                            <li class="custom-dropdown-item" role="option" aria-selected="false" data-value="en">
+                                <span class="lang-text-item">EN</span> <span class="lang-icon">🇬🇧</span>
+                            </li>
+                            <li class="custom-dropdown-item" role="option" aria-selected="false" data-value="de">
+                                <span class="lang-text-item">DE</span> <span class="lang-icon">🇩🇪</span>
+                            </li>
+                            <li class="custom-dropdown-item" role="option" aria-selected="false" data-value="fr">
+                                <span class="lang-text-item">FR</span> <span class="lang-icon">🇫🇷</span>
+                            </li>
+                            <li class="custom-dropdown-item" role="option" aria-selected="false" data-value="zh">
+                                <span class="lang-text-item">ZH</span> <span class="lang-icon">🇨🇳</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title" data-i18n="hero_title">Cuidado Premium<br>Para tus Prendas</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">La tintorería de confianza en Cádiz. Elegancia,
+                    perfección y detalle en cada
+                    lavado.</p>
+                <div class="hero-actions">
+                    <a href="#servicios" class="btn btn-primary" data-i18n="hero_btn_services">Ver Servicios</a>
+                    <a href="#horario" class="btn btn-secondary" data-i18n="hero_btn_visit">Visítanos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="services section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="services_title">Servicios y Precios</h2>
+                    <p class="section-desc" data-i18n="services_desc">Cuidado experto con las técnicas más avanzadas
+                        para garantizar la máxima
+                        durabilidad y esplendor de sus tejidos.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3 class="service-name" data-i18n="service_1_name">Lavado en Seco de Traje</h3>
+                        <p class="service-price">28€</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tshirt"></i></div>
+                        <h3 class="service-name" data-i18n="service_2_name">Planchado de Camisa</h3>
+                        <p class="service-price">5€</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bed"></i></div>
+                        <h3 class="service-name" data-i18n="service_3_name">Limpieza de Edredón</h3>
+                        <p class="service-price">35€</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-gem"></i></div>
+                        <h3 class="service-name" data-i18n="service_4_name">Lavado Vestido de Fiesta</h3>
+                        <p class="service-price" data-i18n="service_4_price">Desde 40€</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3 class="service-name" data-i18n="service_5_name">Limpieza de Alfombras</h3>
+                        <p class="service-price" data-i18n="service_5_price">Desde 20€/m²</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-star"></i></div>
+                        <h3 class="service-name" data-i18n="service_6_name">Bono Mensual Premium</h3>
+                        <p class="service-price">60€</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="resenas" class="reviews section bg-cream">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="reviews_title">Lo que dicen nuestros clientes</h2>
+                    <p class="section-desc" data-i18n="reviews_desc">Testimonios de quienes confían en nosotros sus
+                        prendas más preciadas.</p>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text" data-i18n="review_1_text">"Trato inmejorable y resultados impecables.
+                            Llevé un traje que pensaba
+                            que estaba perdido y lo dejaron como nuevo. Totalmente recomendados."</p>
+                        <h4 class="review-author">- Antonio Gomez de Barreda Lavin</h4>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text" data-i18n="review_2_text">"La mejor tintorería de Cádiz sin ninguna duda.
+                            Rapidez, amabilidad y
+                            profesionalidad al máximo nivel. Mis camisas siempre están perfectas."</p>
+                        <h4 class="review-author">- Edu De la rosa</h4>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text" data-i18n="review_3_text">"Servicio de 10. Limpiaron un abrigo muy
+                            delicado y superaron mis
+                            expectativas. Además el local es precioso y la atención es exquisita."</p>
+                        <h4 class="review-author">- Luis J.Q.</h4>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text" data-i18n="review_4_text">"Fantásticos. Les confié la limpieza de varias
+                            prendas muy delicadas y el
+                            resultado fue espectacular. Tienen un cliente para toda la vida."</p>
+                        <h4 class="review-author">- Rodrigo Virues</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hours & Location Section -->
+        <section id="horario" class="location section">
+            <div class="container location-container">
+                <div class="location-info">
+                    <h2 class="section-title" data-i18n="location_title">Horario y Ubicación</h2>
+
+                    <div class="info-block">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-text">
+                            <h3 data-i18n="location_address_title">Dirección</h3>
+                            <p>Av. Andalucía, 69, Cádiz</p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-text">
+                            <h3 data-i18n="location_phone_title">Teléfono</h3>
+                            <p>691 03 08 74</p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-icon"><i class="far fa-clock"></i></div>
+                        <div class="info-text">
+                            <h3 data-i18n="location_hours_title">Horario de Apertura</h3>
+                            <ul class="hours-list">
+                                <li><span data-i18n="hours_weekdays">Lunes - Viernes:</span> <span>9:30 - 14:00 y 17:00
+                                        - 20:00</span></li>
+                                <li><span data-i18n="hours_saturday">Sábados:</span> <span>10:00 - 13:30</span></li>
+                                <li><span data-i18n="hours_sunday">Domingos:</span> <span
+                                        data-i18n="hours_closed">Cerrado</span></li>
+                            </ul>
+
+                            <div class="status-indicator">
+                                <div id="store-status" class="status-badge" data-i18n="store_status_calc">Calculando
+                                    estado...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.7381255551326!2d-6.281146223405785!3d36.51213077232231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd206a28291f3%3A0xe53bc1bf78bb2af2!2sAv.%20Andaluc%C3%ADa%2C%2069%2C%2011008%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1709748281111!5m2!1ses!2ses"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact section bg-navy text-light">
+            <div class="container contact-container">
+                <div class="contact-header">
+                    <h2 class="section-title" data-i18n="contact_title">Contáctanos</h2>
+                    <p class="section-desc" data-i18n="contact_desc">¿Tienes alguna duda o necesitas un servicio
+                        especial? Escríbenos.</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" class="form-control"
+                            data-i18n-placeholder="contact_name" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control"
+                            data-i18n-placeholder="contact_email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" name="mensaje" class="form-control" rows="5"
+                            data-i18n-placeholder="contact_message" placeholder="Tu mensaje..." required></textarea>
+                    </div>
+
+                    <div class="form-legal">
+                        <label class="legal-checkbox-label">
+                            <input type="checkbox" id="legal-terms" required>
+                            <span class="legal-text" data-i18n="contact_legal">He leído y acepto la Política de
+                                Privacidad y consiento el
+                                tratamiento de mis datos personales según lo establecido en el RGPD. Entiendo que puedo
+                                revocar mi consentimiento en cualquier momento.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit" data-i18n="contact_submit">Enviar
+                        Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="legal-text" data-i18n="footer_copyright">&copy; 2026 Punto Sec Tintorería Premium. Todos los
+                derechos reservados.</p>
+            <div class="footer-links">
+                <a href="aviso-legal.html" class="legal-text" data-i18n="footer_legal">Aviso Legal</a>
+                <a href="politica-privacidad.html" class="legal-text" data-i18n="footer_privacy">Política de
+                    Privacidad</a>
+                <a href="politica-cookies.html" class="legal-text" data-i18n="footer_cookies">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <p class="legal-text" data-i18n="cookie_text">Utilizamos cookies propias y de terceros para mejorar nuestros
+                servicios, analizar tu
+                navegación y ofrecerte una experiencia personalizada. Al hacer clic en "Aceptar", aceptas su uso.</p>
+        </div>
+        <div class="cookie-actions">
+            <button class="btn-cookie btn-cookie-accept" id="accept-cookies" data-i18n="cookie_accept">Aceptar</button>
+            <button class="btn-cookie btn-cookie-reject" id="reject-cookies" data-i18n="cookie_reject">Rechazar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
