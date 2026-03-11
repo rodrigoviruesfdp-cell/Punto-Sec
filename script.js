@@ -492,4 +492,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
         }, 1500);
     });
+
+    // 6. Scroll Animation for Pricing Cards
+    const animatedCards = document.querySelectorAll('.slide-up-anim');
+    if (animatedCards.length > 0) {
+        const observer = new IntersectionObserver((entries, observerInstance) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observerInstance.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        animatedCards.forEach(card => observer.observe(card));
+    }
 });
