@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punto Sec | Tintorería Premium en Cádiz</title>
-    <!-- Favicon -->
-    <link rel="icon" href="IMG/Gemini_Generated_Image_swppp7swppp7swpp_-_Editada.png" type="image/png">
+    <!-- Favicons Icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="IMG/favicon-512x512.png">
     <!-- Google Fonts for typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,7 +27,7 @@
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="IMG/Gemini_Generated_Image_swppp7swppp7swpp_-_Editada.png" alt="Punto Sec Logo" class="logo-img">
+                <img src="IMG/Log punto sec fondo transparente (sin subtitulo ).png" alt="Punto Sec Logo" class="logo-img">
             </a>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
@@ -124,12 +127,25 @@
                         <p class="service-price">60€</p>
                     </div>
                 </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="mas-precios.html" class="btn btn-outline-primary" style="border: 2px solid var(--color-primary); color: var(--color-primary); background: transparent;">Ver lista completa de precios</a>
+                </div>
             </div>
         </section>
 
         <!-- Reviews Section -->
-        <section id="resenas" class="reviews section bg-cream">
-            <div class="container">
+        <section id="resenas" class="reviews section text-light">
+            <div class="bg-collage-container">
+                <div class="collage-track">
+                    <img src="IMG/decoracion/Fotos cinematograficas Puntosec.png" alt="Decoracion 1" class="collage-img">
+                    <img src="IMG/decoracion/Fotos cinematograficas Puntossec (colage ).png" alt="Decoracion 2" class="collage-img">
+                    <img src="IMG/decoracion/Gemini_Generated_Image_2sh8fa2sh8fa2sh8.png" alt="Decoracion 3" class="collage-img">
+                    <img src="IMG/decoracion/Gemini_Generated_Image_3ks1xn3ks1xn3ks1.png" alt="Decoracion 4" class="collage-img">
+                </div>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container" style="position: relative; z-index: 2;">
                 <div class="section-header">
                     <h2 class="section-title" data-i18n="reviews_title">Lo que dicen nuestros clientes</h2>
                     <p class="section-desc" data-i18n="reviews_desc">Testimonios de quienes confían en nosotros sus
@@ -155,7 +171,7 @@
                         <p class="review-text" data-i18n="review_2_text">"La mejor tintorería de Cádiz sin ninguna duda.
                             Rapidez, amabilidad y
                             profesionalidad al máximo nivel. Mis camisas siempre están perfectas."</p>
-                        <h4 class="review-author">- Edu De la rosa</h4>
+                        <h4 class="review-author">- Edu</h4>
                     </div>
                     <div class="review-card">
                         <div class="review-stars">
@@ -175,7 +191,7 @@
                         <p class="review-text" data-i18n="review_4_text">"Fantásticos. Les confié la limpieza de varias
                             prendas muy delicadas y el
                             resultado fue espectacular. Tienen un cliente para toda la vida."</p>
-                        <h4 class="review-author">- Rodrigo Virues</h4>
+                        <h4 class="review-author">- Rodrigo</h4>
                     </div>
                 </div>
             </div>
@@ -234,7 +250,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contacto" class="contact section bg-navy text-light">
+        <section id="contacto" class="contact section bg-primary text-light">
             <div class="container contact-container">
                 <div class="contact-header">
                     <h2 class="section-title" data-i18n="contact_title">Contáctanos</h2>
