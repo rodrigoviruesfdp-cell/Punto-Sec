@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones | Punto Sec Tintorería Premium</title>
+    <!-- Favicons Icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="IMG/favicon-512x512.png">
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Force solid header styling on subpage */
+        .header {
+            background-color: var(--color-primary) !important;
+            padding: 15px 0 !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+        .logo-img {
+            transform: scale(0.85) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Nav -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="IMG/Log punto sec fondo transparente (sin subtitulo ).png" alt="Punto Sec Logo" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio" class="nav-link" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link" data-i18n="nav_services">Servicios</a></li>
+                    <li><a href="index.html#resenas" class="nav-link" data-i18n="nav_reviews">Reseñas</a></li>
+                    <li><a href="index.html#horario" class="nav-link" data-i18n="nav_location">Horario y Ubicación</a></li>
+                    <li><a href="promociones.html" class="nav-btn-outline" data-i18n="nav_promos">Promociones</a></li>
+                    <li class="custom-dropdown-container" id="lang-dropdown">
+                        <button class="custom-dropdown-btn" aria-haspopup="listbox" aria-expanded="false"
+                            id="lang-dropdown-btn">
+                            <span class="lang-text">ES</span> <span class="lang-icon">🇪🇸</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </button>
+                        <ul class="custom-dropdown-menu" role="listbox" aria-labelledby="lang-dropdown-btn"
+                            id="lang-dropdown-menu">
+                            <li class="custom-dropdown-item active" role="option" aria-selected="true" data-value="es">
+                                <span class="lang-text-item">ES</span> <span class="lang-icon">🇪🇸</span>
+                            </li>
+                            <li class="custom-dropdown-item" role="option" aria-selected="false" data-value="en">
+                                <span class="lang-text-item">EN</span> <span class="lang-icon">🇬🇧</span>
+                            </li>
+                            <li class="custom-dropdown-item" role="option" aria-selected="false" data-value="de">
+                                <span class="lang-text-item">DE</span> <span class="lang-icon">🇩🇪</span>
+                            </li>
+                            <li class="custom-dropdown-item" role="option" aria-selected="false" data-value="fr">
+                                <span class="lang-text-item">FR</span> <span class="lang-icon">🇫🇷</span>
+                            </li>
+                            <li class="custom-dropdown-item" role="option" aria-selected="false" data-value="zh">
+                                <span class="lang-text-item">ZH</span> <span class="lang-icon">🇨🇳</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="promo-landing-section">
+            <div class="container">
+                <div class="promo-landing-container">
+                    <div class="promo-landing-img">
+                        <img src="IMG/10%25_Off_Your_Jacket_Care__version_1.png" alt="Cuidado Profesional de Chaquetas Barbour">
+                    </div>
+                    <div class="promo-landing-content">
+                        <h1 class="promo-landing-title">Restaura el alma de tu Barbour</h1>
+                        <p class="promo-landing-subtitle">Disfruta de un 10% de descuento en limpieza y encerado artesanal este mes.</p>
+                        <p class="promo-landing-text">
+                            Las prendas enceradas tipo Barbour requieren un cuidado especial. Un lavado estándar puede arruinar su acabado icónico y su impermeabilidad. En Puntosec, utilizamos técnicas artesanales para limpiar y re-encerar tu chaqueta, devolviéndole su esplendor, protección y durabilidad original. Confía tu inversión a nuestros expertos.
+                        </p>
+                        <a href="mailto:info@puntosec.es" class="btn btn-primary">Solicitar Promoción</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="legal-text" data-i18n="footer_copyright">&copy; 2026 Punto Sec Tintorería Premium. Todos los
+                derechos reservados.</p>
+            <div class="footer-links">
+                <a href="aviso-legal.html" class="legal-text" data-i18n="footer_legal">Aviso Legal</a>
+                <a href="politica-privacidad.html" class="legal-text" data-i18n="footer_privacy">Política de
+                    Privacidad</a>
+                <a href="politica-cookies.html" class="legal-text" data-i18n="footer_cookies">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <p class="legal-text" data-i18n="cookie_text">Utilizamos cookies propias y de terceros para mejorar nuestros
+                servicios, analizar tu
+                navegación y ofrecerte una experiencia personalizada. Al hacer clic en "Aceptar", aceptas su uso.</p>
+        </div>
+        <div class="cookie-actions">
+            <button class="btn-cookie btn-cookie-accept" id="accept-cookies" data-i18n="cookie_accept">Aceptar</button>
+            <button class="btn-cookie btn-cookie-reject" id="reject-cookies" data-i18n="cookie_reject">Rechazar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

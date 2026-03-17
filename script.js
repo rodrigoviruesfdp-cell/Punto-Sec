@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_services: "Servicios",
             nav_reviews: "Reseñas",
             nav_location: "Horario y Ubicación",
+            nav_promos: "Promociones",
             nav_contact: "Contacto",
+            promo_modal_title: "PROMOCIÓN",
+            promo_modal_btn: "Saber más",
             hero_title: "Cuidado Premium<br>Para tus Prendas",
             hero_subtitle: "La tintorería de confianza en Cádiz. Elegancia, perfección y detalle en cada lavado.",
             hero_btn_services: "Ver Servicios",
@@ -60,7 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_services: "Services",
             nav_reviews: "Reviews",
             nav_location: "Hours & Location",
+            nav_promos: "Promotions",
             nav_contact: "Contact",
+            promo_modal_title: "PROMOTION",
+            promo_modal_btn: "Learn more",
             hero_title: "Premium Care<br>For Your Clothes",
             hero_subtitle: "The trusted dry cleaner in Cádiz. Elegance, perfection, and detail in every wash.",
             hero_btn_services: "View Services",
@@ -114,7 +120,10 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_services: "Leistungen",
             nav_reviews: "Bewertungen",
             nav_location: "Zeiten & Ort",
+            nav_promos: "Aktionen",
             nav_contact: "Kontakt",
+            promo_modal_title: "AKTION",
+            promo_modal_btn: "Mehr erfahren",
             hero_title: "Premium-Pflege<br>Für Ihre Kleidung",
             hero_subtitle: "Die vertrauenswürdige Reinigung in Cádiz. Eleganz, Perfektion und Detail in jeder Wäsche.",
             hero_btn_services: "Leistungen sehen",
@@ -168,7 +177,10 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_services: "Services",
             nav_reviews: "Avis",
             nav_location: "Horaires et Lieu",
+            nav_promos: "Promotions",
             nav_contact: "Contact",
+            promo_modal_title: "PROMOTION",
+            promo_modal_btn: "En savoir plus",
             hero_title: "Soin Premium<br>Pour Vos Vêtements",
             hero_subtitle: "Le pressing de confiance à Cadix. Élégance, perfection et détail dans chaque lavage.",
             hero_btn_services: "Voir les Services",
@@ -222,7 +234,10 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_services: "服务",
             nav_reviews: "评价",
             nav_location: "营业时间与地址",
+            nav_promos: "促销",
             nav_contact: "联系我们",
+            promo_modal_title: "促销",
+            promo_modal_btn: "了解更多",
             hero_title: "优质护理<br>为您的衣物",
             hero_subtitle: "加的斯值得信赖的干洗店。每次洗涤都充满优雅、完美和细节。",
             hero_btn_services: "查看服务",
@@ -461,37 +476,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Contact Form Submission
     const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-        const btn = document.querySelector('.btn-submit');
-        const originalText = btn.textContent;
+            const btn = document.querySelector('.btn-submit');
+            const originalText = btn.textContent;
 
-        const sendingText = translations[currentLang] ? translations[currentLang].contact_sending : 'Enviando...';
-        const sentText = translations[currentLang] ? translations[currentLang].contact_sent : 'Mensaje Enviado';
+            const sendingText = translations[currentLang] ? translations[currentLang].contact_sending : 'Enviando...';
+            const sentText = translations[currentLang] ? translations[currentLang].contact_sent : 'Mensaje Enviado';
 
-        btn.textContent = sendingText;
-        btn.style.opacity = '0.8';
-        btn.disabled = true;
-
-        setTimeout(() => {
-            btn.textContent = sentText;
-            btn.style.backgroundColor = '#27ae60';
-            btn.style.borderColor = '#27ae60';
-            btn.style.color = 'white';
-
-            contactForm.reset();
+            btn.textContent = sendingText;
+            btn.style.opacity = '0.8';
+            btn.disabled = true;
 
             setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.backgroundColor = '';
-                btn.style.borderColor = '';
-                btn.style.color = '';
-                btn.disabled = false;
-                btn.style.opacity = '1';
-            }, 3000);
-        }, 1500);
-    });
+                btn.textContent = sentText;
+                btn.style.backgroundColor = '#27ae60';
+                btn.style.borderColor = '#27ae60';
+                btn.style.color = 'white';
+
+                contactForm.reset();
+
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.borderColor = '';
+                    btn.style.color = '';
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                }, 3000);
+            }, 1500);
+        });
+    }
 
     // 6. Scroll Animation for Pricing Cards
     const animatedCards = document.querySelectorAll('.slide-up-anim');
@@ -509,5 +526,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         animatedCards.forEach(card => observer.observe(card));
+    }
+
+    // 7. Promotional Modal Logic
+    const promoModal = document.getElementById('promo-modal');
+    if (promoModal) {
+        const promoCloseBtn = document.getElementById('promo-close-btn');
+
+        let hasScrolled = false;
+        let promoTriggered = false;
+
+        const triggerPromo = () => {
+            hasScrolled = true;
+            if (!promoTriggered) {
+                promoTriggered = true;
+                setTimeout(() => {
+                    promoModal.classList.add('show');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling while open
+                }, 3000); // Aparece a los 3 segundos
+            }
+        };
+
+        // Activa el modal al hacer scroll la primera vez en la sesión actual
+        window.addEventListener('scroll', triggerPromo, { once: true });
+
+        // Close modal logic
+        const closePromoModal = () => {
+            promoModal.classList.remove('show');
+            document.body.style.overflow = '';
+        };
+
+        promoCloseBtn.addEventListener('click', closePromoModal);
+
+        // Also close if clicked outside content
+        promoModal.addEventListener('click', (e) => {
+            if (e.target === promoModal) {
+                closePromoModal();
+            }
+        });
     }
 });

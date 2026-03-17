@@ -38,7 +38,7 @@
                     <li><a href="#servicios" class="nav-link" data-i18n="nav_services">Servicios</a></li>
                     <li><a href="#resenas" class="nav-link" data-i18n="nav_reviews">Reseñas</a></li>
                     <li><a href="#horario" class="nav-link" data-i18n="nav_location">Horario y Ubicación</a></li>
-                    <li><a href="#contacto" class="nav-btn" data-i18n="nav_contact">Contacto</a></li>
+                    <li><a href="promociones.html" class="nav-btn-outline" data-i18n="nav_promos">Promociones</a></li>
                     <li class="custom-dropdown-container" id="lang-dropdown">
                         <button class="custom-dropdown-btn" aria-haspopup="listbox" aria-expanded="false"
                             id="lang-dropdown-btn">
@@ -245,45 +245,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Contact Section -->
-        <section id="contacto" class="contact section bg-primary text-light">
-            <div class="container contact-container">
-                <div class="contact-header">
-                    <h2 class="section-title" data-i18n="contact_title">Contáctanos</h2>
-                    <p class="section-desc" data-i18n="contact_desc">¿Tienes alguna duda o necesitas un servicio
-                        especial? Escríbenos.</p>
-                </div>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="nombre" name="nombre" class="form-control"
-                            data-i18n-placeholder="contact_name" placeholder="Nombre completo" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" class="form-control"
-                            data-i18n-placeholder="contact_email" placeholder="Correo electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="mensaje" name="mensaje" class="form-control" rows="5"
-                            data-i18n-placeholder="contact_message" placeholder="Tu mensaje..." required></textarea>
-                    </div>
-
-                    <div class="form-legal">
-                        <label class="legal-checkbox-label">
-                            <input type="checkbox" id="legal-terms" required>
-                            <span class="legal-text" data-i18n="contact_legal">He leído y acepto la Política de
-                                Privacidad y consiento el
-                                tratamiento de mis datos personales según lo establecido en el RGPD. Entiendo que puedo
-                                revocar mi consentimiento en cualquier momento.</span>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-submit" data-i18n="contact_submit">Enviar
-                        Mensaje</button>
-                </form>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -310,6 +271,20 @@
         <div class="cookie-actions">
             <button class="btn-cookie btn-cookie-accept" id="accept-cookies" data-i18n="cookie_accept">Aceptar</button>
             <button class="btn-cookie btn-cookie-reject" id="reject-cookies" data-i18n="cookie_reject">Rechazar</button>
+        </div>
+    </div>
+
+    <!-- Promotional Modal -->
+    <div class="promo-modal-overlay" id="promo-modal">
+        <div class="promo-modal-content">
+            <button class="promo-close-btn" id="promo-close-btn" aria-label="Cerrar modal">&times;</button>
+            <h3 class="promo-modal-title" data-i18n="promo_modal_title">PROMOCIÓN</h3>
+            <div class="promo-img-container">
+                <img src="IMG/Is_your_Barbour_losing_its_soul__version_1.png" alt="Restaura tu Barbour">
+            </div>
+            <div class="promo-btn-container">
+                <a href="promociones.html" class="btn btn-primary promo-btn-cta" data-i18n="promo_modal_btn">Saber más</a>
+            </div>
         </div>
     </div>
 
