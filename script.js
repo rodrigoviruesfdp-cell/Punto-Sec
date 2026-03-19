@@ -510,8 +510,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Scroll Animation for Pricing Cards
-    const animatedCards = document.querySelectorAll('.slide-up-anim');
+    // 6. Scroll Animation for Pricing Cards & Promo Cards
+    const animatedCards = document.querySelectorAll('.slide-up-anim, .scroll-reveal');
     if (animatedCards.length > 0) {
         const observer = new IntersectionObserver((entries, observerInstance) => {
             entries.forEach(entry => {
