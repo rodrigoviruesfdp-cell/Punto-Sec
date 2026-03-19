@@ -468,12 +468,23 @@
            RESPONSIVE
         ============================================= */
         @media (max-width: 640px) {
-            .sc-hero { padding: 5rem 1.5rem 3.5rem; }
-            .sc-grid  { gap: 1.5rem; margin: 2.5rem auto; padding: 0 1.25rem; }
-            .sc-card  { padding: 2rem; }
-            .sc-cta   { padding: 0 1.25rem; }
-            .sc-cta-inner { padding: 2.5rem 1.5rem; border-radius: 20px; }
-            .sc-pills { gap: .6rem; }
+            .sc-hero { padding: 4.5rem 1.25rem 3rem; }
+            .sc-title { font-size: 2rem; }
+            .sc-grid  { gap: 1.25rem; margin: 2rem auto; padding: 0 1rem; }
+            .sc-card  { padding: 1.75rem 1.25rem; border-radius: 18px; }
+            .sc-card h3 { font-size: 1.15rem; }
+            .sc-cta   { padding: 0 1rem; }
+            .sc-cta-inner { padding: 2.5rem 1.25rem; border-radius: 20px; }
+            .sc-pills { gap: .5rem; }
+            .sc-pill { padding: .4rem .8rem; font-size: .75rem; }
+        }
+
+        @media (max-width: 480px) {
+            .sc-hero { padding: 4rem 1rem 2.5rem; }
+            .sc-title { font-size: 1.7rem; }
+            .sc-card { padding: 1.5rem 1.25rem; }
+            .sc-icon { width: 50px; height: 50px; margin-bottom: 1.25rem; }
+            .sc-icon svg { width: 22px; height: 22px; }
         }
     </style>
 </head>
@@ -493,11 +504,11 @@
             </button>
             <nav class="nav" id="main-nav">
                 <ul class="nav-list">
-                    <li><a href="index.html#inicio"   class="nav-link">Inicio</a></li>
-                    <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
-                    <li><a href="index.html#resenas"  class="nav-link">Reseñas</a></li>
-                    <li><a href="index.html#horario"  class="nav-link">Horario y Ubicación</a></li>
-                    <li><a href="promociones.html"    class="nav-btn-outline">Promociones</a></li>
+                    <li><a href="index.html#inicio"   class="nav-link" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link" data-i18n="nav_services">Servicios</a></li>
+                    <li><a href="index.html#resenas"  class="nav-link" data-i18n="nav_reviews">Reseñas</a></li>
+                    <li><a href="index.html#horario"  class="nav-link" data-i18n="nav_location">Horario y Ubicación</a></li>
+                    <li><a href="promociones.html"    class="nav-btn-outline" data-i18n="nav_promos">Promociones</a></li>
                     <li class="custom-dropdown-container" id="lang-dropdown">
                         <button class="custom-dropdown-btn" aria-haspopup="listbox" aria-expanded="false" id="lang-dropdown-btn">
                             <span class="lang-text">ES</span> <span class="lang-icon">🇪🇸</span>
@@ -525,14 +536,14 @@
             <div class="sc-hero-dots"></div>
             <div class="sc-hero-inner">
                 <a href="index.html#servicios" class="sc-breadcrumb">
-                    <i class="fas fa-arrow-left"></i> Volver a Servicios y Precios
+                    <i class="fas fa-arrow-left"></i> <span data-i18n="sc_breadcrumb">Volver a Servicios y Precios</span>
                 </a>
-                <div class="sc-badge">Servicios Especiales</div>
-                <h1 class="sc-title">Cuidado <span>Experto</span><br>Para Cada Prenda</h1>
-                <p class="sc-subtitle">Tratamientos avanzados y técnicas profesionales para las prendas que merecen una atención diferente.</p>
+                <div class="sc-badge" data-i18n="sc_hero_badge">Servicios Especiales</div>
+                <h1 class="sc-title" data-i18n="sc_hero_title">Cuidado <span>Experto</span><br>Para Cada Prenda</h1>
+                <p class="sc-subtitle" data-i18n="sc_hero_subtitle">Tratamientos avanzados y técnicas profesionales para las prendas que merecen una atención diferente.</p>
                 <div class="sc-pills">
-                    <div class="sc-pill"><i class="fas fa-award"></i> Más de 20 años de experiencia</div>
-                    <div class="sc-pill"><i class="fas fa-map-marker-alt"></i> Av. Andalucía 69, Cádiz</div>
+                    <div class="sc-pill"><i class="fas fa-award"></i> <span data-i18n="sc_pill_experience">Más de 20 años de experiencia</span></div>
+                    <div class="sc-pill"><i class="fas fa-map-marker-alt"></i> <span data-i18n="sc_pill_location">Av. Andalucía 69, Cádiz</span></div>
                     <div class="sc-pill"><i class="fas fa-phone-alt"></i> 691 03 08 74</div>
                 </div>
             </div>
@@ -553,13 +564,13 @@
                             <circle cx="7" cy="7" r="1.5"/>
                         </svg>
                     </div>
-                    <h3>Etiquetas Personalizadas</h3>
-                    <p>Marcado duradero para identificar tus prendas de forma segura y discreta.</p>
-                    <span class="sc-chip"><i class="fas fa-check-circle"></i> Servicio disponible</span>
+                    <h3 data-i18n="sc_01_name">Etiquetas Personalizadas</h3>
+                    <p data-i18n="sc_01_desc">Marcado duradero para identificar tus prendas de forma segura y discreta.</p>
+                    <span class="sc-chip"><i class="fas fa-check-circle"></i> <span data-i18n="sc_chip_available">Servicio disponible</span></span>
                 </article>
 
                 <!-- 02 Envasado al vacío -->
-                <article class="sc-card" data-c="violet">
+                <article class="sc-card" data-c="cyan">
                     <span class="sc-num">02</span>
                     <div class="sc-icon">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -568,13 +579,13 @@
                             <path d="M2 8h20M2 16h20"/>
                         </svg>
                     </div>
-                    <h3>Envasado al Vacío</h3>
-                    <p>Optimizamos tu espacio. Conservación perfecta que protege tus prendas del polvo y la humedad.</p>
-                    <span class="sc-chip"><i class="fas fa-check-circle"></i> Servicio disponible</span>
+                    <h3 data-i18n="sc_02_name">Envasado al Vacío</h3>
+                    <p data-i18n="sc_02_desc">Optimizamos tu espacio. Conservación perfecta que protege tus prendas del polvo y la humedad.</p>
+                    <span class="sc-chip"><i class="fas fa-check-circle"></i> <span data-i18n="sc_chip_available">Servicio disponible</span></span>
                 </article>
 
                 <!-- 03 Barbour y prendas enceradas -->
-                <article class="sc-card" data-c="teal">
+                <article class="sc-card" data-c="cyan">
                     <span class="sc-num">03</span>
                     <div class="sc-icon">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -584,13 +595,13 @@
                             <path d="M8 7.5C8 6 10 4.5 12 4.5s4 1.5 4 3"/>
                         </svg>
                     </div>
-                    <h3>Barbour y Prendas Enceradas</h3>
-                    <p>Limpieza profunda y re-encerado profesional para devolver la impermeabilidad original.</p>
-                    <span class="sc-chip"><i class="fas fa-info-circle"></i> Pago 50% adelantado</span>
+                    <h3 data-i18n="sc_03_name">Barbour y Prendas Enceradas</h3>
+                    <p data-i18n="sc_03_desc">Limpieza profunda y re-encerado profesional para devolver la impermeabilidad original.</p>
+                    <span class="sc-chip"><i class="fas fa-info-circle"></i> <span data-i18n="sc_chip_prepago">Pago 50% adelantado</span></span>
                 </article>
 
                 <!-- 04 Sofás y colchones a domicilio -->
-                <article class="sc-card" data-c="amber">
+                <article class="sc-card" data-c="cyan">
                     <span class="sc-num">04</span>
                     <div class="sc-icon">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -599,13 +610,13 @@
                             <path d="M1 15v3M23 15v3"/>
                         </svg>
                     </div>
-                    <h3>Sofás y Colchones a Domicilio</h3>
-                    <p>Higienización profunda in situ. Eliminamos ácaros, manchas y olores sin mover tus muebles.</p>
-                    <span class="sc-chip"><i class="fas fa-home"></i> Servicio a domicilio</span>
+                    <h3 data-i18n="sc_04_name">Sofás y Colchones a Domicilio</h3>
+                    <p data-i18n="sc_04_desc">Higienización profunda in situ. Eliminamos ácaros, manchas y olores sin mover tus muebles.</p>
+                    <span class="sc-chip"><i class="fas fa-home"></i> <span data-i18n="sc_chip_home">Servicio a domicilio</span></span>
                 </article>
 
                 <!-- 05 Alta Peletería -->
-                <article class="sc-card" data-c="rose">
+                <article class="sc-card" data-c="cyan">
                     <span class="sc-num">05</span>
                     <div class="sc-icon">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -614,13 +625,13 @@
                             <path d="M15 8c0 1.5-1 3.5-3 5"/>
                         </svg>
                     </div>
-                    <h3>Alta Peletería</h3>
-                    <p>Tratamiento experto, hidratación y cuidado delicado para mantener el brillo y la textura de tus pieles.</p>
-                    <span class="sc-chip"><i class="fas fa-info-circle"></i> Pago 50% adelantado</span>
+                    <h3 data-i18n="sc_05_name">Alta Peletería</h3>
+                    <p data-i18n="sc_05_desc">Tratamiento experto, hidratación y cuidado delicado para mantener el brillo y la textura de tus pieles.</p>
+                    <span class="sc-chip"><i class="fas fa-info-circle"></i> <span data-i18n="sc_chip_prepago">Pago 50% adelantado</span></span>
                 </article>
 
                 <!-- 06 Tapicería general -->
-                <article class="sc-card" data-c="indigo">
+                <article class="sc-card" data-c="cyan">
                     <span class="sc-num">06</span>
                     <div class="sc-icon">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -630,13 +641,13 @@
                             <path d="M6 17v2M18 17v2"/>
                         </svg>
                     </div>
-                    <h3>Tapicería General</h3>
-                    <p>Restauración y limpieza profunda para cortinas, alfombras y tejidos del hogar.</p>
-                    <span class="sc-chip"><i class="fas fa-check-circle"></i> Servicio disponible</span>
+                    <h3 data-i18n="sc_06_name">Tapicería General</h3>
+                    <p data-i18n="sc_06_desc">Restauración y limpieza profunda para cortinas, alfombras y tejidos del hogar.</p>
+                    <span class="sc-chip"><i class="fas fa-check-circle"></i> <span data-i18n="sc_chip_available">Servicio disponible</span></span>
                 </article>
 
                 <!-- 07 Trajes de Flamenca -->
-                <article class="sc-card" data-c="fuchsia">
+                <article class="sc-card" data-c="cyan">
                     <span class="sc-num">07</span>
                     <div class="sc-icon">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -644,13 +655,13 @@
                             <path d="M9.5 16.5c-.3 1.5.2 2.8 2.5 3.5 2.3-.7 2.8-2 2.5-3.5"/>
                         </svg>
                     </div>
-                    <h3>Trajes de Flamenca</h3>
-                    <p>Cuidado minucioso de volantes, encajes y aprestos para que luzcan impecables.</p>
-                    <span class="sc-chip"><i class="fas fa-star"></i> Especialidad Andaluza</span>
+                    <h3 data-i18n="sc_07_name">Trajes de Flamenca</h3>
+                    <p data-i18n="sc_07_desc">Cuidado minucioso de volantes, encajes y aprestos para que luzcan impecables.</p>
+                    <span class="sc-chip"><i class="fas fa-star"></i> <span data-i18n="sc_chip_flamenca">Especialidad Andaluza</span></span>
                 </article>
 
                 <!-- 08 Trajes de Comunión -->
-                <article class="sc-card" data-c="emerald">
+                <article class="sc-card" data-c="cyan">
                     <span class="sc-num">08</span>
                     <div class="sc-icon">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -660,9 +671,9 @@
                             <path d="M7 20h10"/>
                         </svg>
                     </div>
-                    <h3>Trajes de Comunión</h3>
-                    <p>Delicadeza absoluta para prendas irrepetibles. Limpieza y conservación de tejidos nobles.</p>
-                    <span class="sc-chip"><i class="fas fa-heart"></i> Máxima delicadeza</span>
+                    <h3 data-i18n="sc_08_name">Trajes de Comunión</h3>
+                    <p data-i18n="sc_08_desc">Delicadeza absoluta para prendas irrepetibles. Limpieza y conservación de tejidos nobles.</p>
+                    <span class="sc-chip"><i class="fas fa-heart"></i> <span data-i18n="sc_chip_love">Máxima delicadeza</span></span>
                 </article>
 
             </div>
@@ -671,21 +682,21 @@
             <div class="sc-cta">
                 <div class="sc-cta-inner">
                     <div class="sc-cta-content">
-                        <p class="sc-cta-eyebrow"><i class="fas fa-map-marker-alt"></i> Estamos en Cádiz</p>
-                        <h2>¿No encuentras lo que buscas?<br><span>Ven a Punto Sec y lo hablamos</span></h2>
-                        <p class="sc-cta-text">Para servicios especiales, presupuestos personalizados o cualquier duda sobre el cuidado de tus prendas, nuestro equipo te atenderá con toda la atención que mereces.</p>
+                        <p class="sc-cta-eyebrow" data-i18n="sc_cta_eyebrow"><i class="fas fa-map-marker-alt"></i> Estamos en Cádiz</p>
+                        <h2 data-i18n="sc_cta_title">¿No encuentras lo que buscas?<br><span>Ven a Punto Sec y lo hablamos</span></h2>
+                        <p class="sc-cta-text" data-i18n="sc_cta_text">Para servicios especiales, presupuestos personalizados o cualquier duda sobre el cuidado de tus prendas, nuestro equipo te atenderá con toda la atención que mereces.</p>
                         <div class="sc-cta-btns">
                             <a href="tel:691030874" class="sc-btn-filled">
-                                <i class="fas fa-phone-alt"></i> Llámanos ahora
+                                <i class="fas fa-phone-alt"></i> <span data-i18n="sc_cta_btn_phone">Llámanos ahora</span>
                             </a>
                             <a href="index.html#horario" class="sc-btn-outline-white">
-                                <i class="fas fa-store"></i> Ver horarios y ubicación
+                                <i class="fas fa-store"></i> <span data-i18n="sc_cta_btn_store">Ver horarios y ubicación</span>
                             </a>
                         </div>
                         <div class="sc-cta-strips">
-                            <span class="sc-strip"><i class="fas fa-clock"></i> Lunes–Viernes: 9:30–14:00 y 17:00–20:00</span>
-                            <span class="sc-strip"><i class="fas fa-calendar-check"></i> Sábados: 10:00–13:30</span>
-                            <span class="sc-strip"><i class="fas fa-map-marker-alt"></i> Av. Andalucía 69, Cádiz</span>
+                            <span class="sc-strip"><i class="fas fa-clock"></i> <span data-i18n="sc_cta_strip_hours">Lunes–Viernes: 9:30–14:00 y 17:00–20:00</span></span>
+                            <span class="sc-strip"><i class="fas fa-calendar-check"></i> <span data-i18n="sc_cta_strip_sat">Sábados: 10:00–13:30</span></span>
+                            <span class="sc-strip"><i class="fas fa-map-marker-alt"></i> <span data-i18n="sc_cta_strip_addr">Av. Andalucía 69, Cádiz</span></span>
                         </div>
                     </div>
                 </div>
@@ -715,34 +726,34 @@
             </div>
 
             <div class="footer-recommendations">
-                <h3>Normas del establecimiento</h3>
+                <h3 data-i18n="footer_rules_title">Normas del establecimiento</h3>
                 <div class="recom-list">
                     <div class="recom-item">
-                        <div class="recom-text">Prohibido fumar.</div>
+                        <div class="recom-text" data-i18n="recom_smoking">Prohibido fumar.</div>
                         <div class="recom-icon"><i class="fas fa-smoking-ban"></i></div>
                     </div>
                     <div class="recom-item">
-                        <div class="recom-text">Solo efectivo.</div>
+                        <div class="recom-text" data-i18n="recom_cash">Solo efectivo.</div>
                         <div class="recom-icon"><i class="fas fa-money-bill-wave"></i></div>
                     </div>
                     <div class="recom-item">
-                        <div class="recom-text">Transcurrido 1 año desde la fecha de recepción de las prendas en la tienda y no hayan sido retiradas por el cliente, se donarán a organizaciones no gubernamentales.</div>
+                        <div class="recom-text" data-i18n="recom_donation">Transcurrido 1 año desde la fecha de recepción de las prendas en la tienda y no hayan sido retiradas por el cliente, se donarán a organizaciones no gubernamentales.</div>
                         <div class="recom-icon"><i class="fas fa-calendar-times"></i></div>
                     </div>
                     <div class="recom-item">
-                        <div class="recom-text">Los clientes que no entreguen el resguardo para recoger sus prendas deberán rellenar el impreso correspondiente y pasar a recogerlas el día siguiente.</div>
+                        <div class="recom-text" data-i18n="recom_receipt">Los clientes que no entreguen el resguardo para recoger sus prendas deberán rellenar el impreso correspondiente y pasar a recogerlas el día siguiente.</div>
                         <div class="recom-icon"><i class="fas fa-file-signature"></i></div>
                     </div>
                     <div class="recom-item">
-                        <div class="recom-text">En alfombras, barbour, peluches, arreglos de costura y pieles se abonará el 50% por adelantado.</div>
+                        <div class="recom-text" data-i18n="recom_advance">En alfombras, barbour, peluches, arreglos de costura y pieles se abonará el 50% por adelantado.</div>
                         <div class="recom-icon"><i class="fas fa-percentage"></i></div>
                     </div>
                     <div class="recom-item">
-                        <div class="recom-text">La empresa no se hace responsable de las medidas de costuras tomadas por el cliente. En caso de rehacer el arreglo de costura se abonará como otro servicio.</div>
+                        <div class="recom-text" data-i18n="recom_measures">La empresa no se hace responsable de las medidas de costuras tomadas por el cliente. En caso de rehacer el arreglo de costura se abonará como otro servicio.</div>
                         <div class="recom-icon"><i class="fas fa-ruler-combined"></i></div>
                     </div>
                     <div class="recom-item" style="grid-column: 1 / -1; max-width: 50%; margin: 0 auto;">
-                        <div class="recom-text">La empresa no se hace responsable de rotura de cremalleras, botones, lentejuelas, pedrería y todo tipo de adornos y abalorios.</div>
+                        <div class="recom-text" data-i18n="recom_items">La empresa no se hace responsable de rotura de cremalleras, botones, lentejuelas, pedrería y todo tipo de adornos y abalorios.</div>
                         <div class="recom-icon"><i class="fas fa-cut"></i></div>
                     </div>
                 </div>
@@ -839,7 +850,7 @@
             </style>
 
             <div class="footer-labels-header">
-                <h3>Etiquetado para la limpieza de prendas</h3>
+                <h3 data-i18n="footer_labels_title">Etiquetado para la limpieza de prendas</h3>
             </div>
             <div class="footer-labels">
                 <!-- Columna 1: Limpieza en Seco -->
@@ -852,19 +863,19 @@
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="12" fill="white" stroke="none" font-family="Arial">A</text></svg>
                                 </div>
-                                <span class="label-text">Disolventes corrientes</span>
+                                <span class="label-text" data-i18n="label_solvents">Disolventes corrientes</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="12" fill="white" stroke="none" font-family="Arial">P</text></svg>
                                 </div>
-                                <span class="label-text">Percloroetileno</span>
+                                <span class="label-text" data-i18n="label_perclo">Percloroetileno</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="12" fill="white" stroke="none" font-family="Arial">F</text></svg>
                                 </div>
-                                <span class="label-text">Tricloroetano</span>
+                                <span class="label-text" data-i18n="label_triclo">Tricloroetano</span>
                             </div>
                         </div>
 
@@ -872,14 +883,14 @@
                             <div class="label-svg">
                                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="6" y1="20" x2="18" y2="20" stroke-width="1.2"/></svg>
                             </div>
-                            <span class="label-text">Precaución: Aconsejable secado a máx. 45°</span>
+                            <span class="label-text" data-i18n="label_dry_caution">Precaución: Aconsejable secado a máx. 45°</span>
                         </div>
 
                         <div class="label-item">
                             <div class="label-svg">
                                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="5" y1="5" x2="19" y2="19" stroke-width="1.2"/><line x1="19" y1="5" x2="5" y2="19" stroke-width="1.2"/></svg>
                             </div>
-                            <span class="label-text">Prohibido limpiar en seco</span>
+                            <span class="label-text" data-i18n="label_dry_prohibited">Prohibido limpiar en seco</span>
                         </div>
                     </div>
                 </div>
@@ -895,19 +906,19 @@
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><path d="M22 10l-1 8a2 2 0 01-2 2H5a2 2 0 01-2-2l-1-8"/><path d="M2 10h20"/><text x="12" y="16" text-anchor="middle" font-size="7" fill="white" stroke="none" font-weight="bold">30º</text></svg>
                                 </div>
-                                <span class="label-text">Lavado a mano</span>
+                                <span class="label-text" data-i18n="label_hand_wash">Lavado a mano</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><path d="M22 10l-1 8a2 2 0 01-2 2H5a2 2 0 01-2-2l-1-8"/><path d="M2 10h20"/><text x="12" y="16" text-anchor="middle" font-size="7" fill="white" stroke="none" font-weight="bold">40º</text></svg>
                                 </div>
-                                <span class="label-text">Lavar a máquina</span>
+                                <span class="label-text" data-i18n="label_machine_wash">Lavar a máquina</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><path d="M22 10l-1 8a2 2 0 01-2 2H5a2 2 0 01-2-2l-1-8"/><line x1="4" y1="4" x2="20" y2="20" stroke-width="1.2"/><line x1="20" y1="4" x2="4" y2="20" stroke-width="1.2"/></svg>
                                 </div>
-                                <span class="label-text">Prohibido agua</span>
+                                <span class="label-text" data-i18n="label_water_prohibited">Prohibido agua</span>
                             </div>
                         </div>
 
@@ -917,19 +928,19 @@
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><path d="M4 18h16a3 3 0 00-3-8h-6a4 4 0 00-4 4v4z"/><path d="M4 14h3"/><circle cx="12" cy="14" r="1" fill="white" stroke="none"/></svg>
                                 </div>
-                                <span class="label-text">Suave 110º</span>
+                                <span class="label-text" data-i18n="label_iron_mild">Suave 110º</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><path d="M4 18h16a3 3 0 00-3-8h-6a4 4 0 00-4 4v4z"/><path d="M4 14h3"/><circle cx="10" cy="14" r="1" fill="white" stroke="none"/><circle cx="14" cy="14" r="1" fill="white" stroke="none"/></svg>
                                 </div>
-                                <span class="label-text">Normal 150º</span>
+                                <span class="label-text" data-i18n="label_iron_normal">Normal 150º</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><path d="M4 18h16a3 3 0 00-3-8h-6a4 4 0 00-4 4v4z"/><line x1="4" y1="4" x2="20" y2="20" stroke-width="1.2"/><line x1="20" y1="4" x2="4" y2="20" stroke-width="1.2"/></svg>
                                 </div>
-                                <span class="label-text">Prohibido planchar</span>
+                                <span class="label-text" data-i18n="label_iron_prohibited">Prohibido planchar</span>
                             </div>
                         </div>
                     </div>
@@ -941,25 +952,25 @@
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/></svg>
                                 </div>
-                                <span class="label-text">Admite lejía</span>
+                                <span class="label-text" data-i18n="label_bleach_ok">Admite lejía</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><line x1="5" y1="7" x2="19" y2="17" stroke-width="1.2"/></svg>
                                 </div>
-                                <span class="label-text">Sin lejía</span>
+                                <span class="label-text" data-i18n="label_bleach_no">Sin lejía</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="7"/></svg>
                                 </div>
-                                <span class="label-text">Secadora</span>
+                                <span class="label-text" data-i18n="label_dryer">Secadora</span>
                             </div>
                             <div class="label-item">
                                 <div class="label-svg">
                                     <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="6" x2="8" y2="18"/><line x1="12" y1="6" x2="12" y2="18"/><line x1="16" y1="6" x2="16" y2="18"/></svg>
                                 </div>
-                                <span class="label-text">Tender sin escurrir</span>
+                                <span class="label-text" data-i18n="label_hang_dry">Tender sin escurrir</span>
                             </div>
                         </div>
                     </div>
@@ -967,11 +978,11 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="legal-text">&copy; 2026 Punto Sec Tintorería Premium. Todos los derechos reservados.</p>
+                <p class="legal-text" data-i18n="footer_copyright">&copy; 2026 Punto Sec Tintorería Premium. Todos los derechos reservados.</p>
                 <div class="footer-links">
-                    <a href="aviso-legal.html"         class="legal-text">Aviso Legal</a>
-                    <a href="politica-privacidad.html" class="legal-text">Política de Privacidad</a>
-                    <a href="politica-cookies.html"    class="legal-text">Política de Cookies</a>
+                    <a href="aviso-legal.html"         class="legal-text" data-i18n="footer_legal">Aviso Legal</a>
+                    <a href="politica-privacidad.html" class="legal-text" data-i18n="footer_privacy">Política de Privacidad</a>
+                    <a href="politica-cookies.html"    class="legal-text" data-i18n="footer_cookies">Política de Cookies</a>
                 </div>
             </div>
         </div>
@@ -980,11 +991,11 @@
     <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-content">
-            <p class="legal-text">Utilizamos cookies propias y de terceros para mejorar nuestros servicios, analizar tu navegación y ofrecerte una experiencia personalizada. Al hacer clic en "Aceptar", aceptas su uso.</p>
+            <p class="legal-text" data-i18n="cookie_text">Utilizamos cookies propias y de terceros para mejorar nuestros servicios, analizar tu navegación y ofrecerte una experiencia personalizada. Al hacer clic en "Aceptar", aceptas su uso.</p>
         </div>
         <div class="cookie-actions">
-            <button class="btn-cookie btn-cookie-accept" id="accept-cookies">Aceptar</button>
-            <button class="btn-cookie btn-cookie-reject" id="reject-cookies">Rechazar</button>
+            <button class="btn-cookie btn-cookie-accept" id="accept-cookies" data-i18n="cookie_accept">Aceptar</button>
+            <button class="btn-cookie btn-cookie-reject" id="reject-cookies" data-i18n="cookie_reject">Rechazar</button>
         </div>
     </div>
 
