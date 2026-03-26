@@ -29,6 +29,40 @@
         .logo-img {
             transform: scale(0.85) !important;
         }
+
+        /* Active Badge Styles */
+        .green-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(46, 204, 113, 0.8);
+            position: relative;
+            display: inline-block;
+        }
+
+        .green-dot::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            border-radius: inherit;
+            animation: pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -86,19 +120,32 @@
         <section class="promo-feed-section">
             <div class="container promo-feed-container">
 
-                <!-- Card 1 -->
+                <!-- Card 0: Nueva Promoción Activa (Túnicas) -->
                 <div class="promo-card scroll-reveal">
+                    <div class="promo-status-badge">
+                        <span class="green-dot"></span><span data-i18n="promo_status_active">Activa</span>
+                    </div>
+                    <div class="promo-card-content">
+                        <h2 class="promo-card-title" data-i18n="promo_05_title">Limpieza y Planchado de Túnicas de Penitente</h2>
+                        <p class="promo-card-text" data-i18n="promo_05_text">Adelántate a la Semana Santa. Servicio completo de lavado y planchado para capirotes, capas y túnicas de penitente con acabado premium profesional. <strong>Precio promocional: 25€</strong>.</p>
+                        <a href="index.html#horario" class="btn btn-primary" data-i18n="promo_btn_contact">Contáctanos</a>
+                    </div>
+                    <div class="promo-card-img" style="background-image: url('IMG/promo_tunicas_penitente.png'); background-size: cover; background-position: center;">
+                    </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="promo-card scroll-reveal delay-200">
                     <div class="promo-status-badge"><span class="red-dot"></span><span
                             data-i18n="promo_status_no_active">No activa</span></div>
                     <div class="promo-card-content">
                         <h2 class="promo-card-title" data-i18n="promo_01_title">Restaura el alma de tu Barbour</h2>
                         <p class="promo-card-text" data-i18n="promo_01_text">Devuelve a tu prenda su impermeabilidad y
                             esplendor original con nuestro servicio artesanal.</p>
-                        <a href="mailto:info@puntosec.es" class="btn btn-primary" data-i18n="promo_btn_more">Saber
-                            más</a>
+                        <a href="index.html#horario" class="btn btn-primary" data-i18n="promo_btn_contact">Contáctanos</a>
                     </div>
                     <div class="promo-card-img">
-                        <img src="IMG/Is_your_Barbour_losing_its_soul__version_1 (1).png" alt="Restaura Barbour">
+                        <img src="IMG/pomelli_image (3).png" alt="Tela Barbour Premium">
                     </div>
                 </div>
 
@@ -110,8 +157,7 @@
                         <h2 class="promo-card-title" data-i18n="promo_02_title">Renueva tu armario: 3x2</h2>
                         <p class="promo-card-text" data-i18n="promo_02_text">Disfruta de nuestra oferta exclusiva en
                             todos los servicios de limpieza textil. Trae tres prendas y paga solo dos.</p>
-                        <a href="mailto:info@puntosec.es" class="btn btn-primary"
-                            data-i18n="promo_btn_request">Solicitar promoción</a>
+                        <a href="index.html#horario" class="btn btn-primary" data-i18n="promo_btn_contact">Contáctanos</a>
                     </div>
                     <div class="promo-card-img"
                         style="background-image: url('IMG/Three_Pieces__Two-Price_Perfection__version_1%20(1).png'); background-size: cover; background-position: center 95%;">
@@ -120,18 +166,17 @@
 
                 <!-- Card 3 -->
                 <div class="promo-card scroll-reveal delay-400">
-                    <div class="promo-status-badge" style="top: auto; bottom: 25px;"><span class="red-dot"></span>No
+                    <div class="promo-status-badge"><span class="red-dot"></span>No
                         activa</div>
                     <div class="promo-card-content">
                         <h2 class="promo-card-title" data-i18n="promo_03_title">Un descanso para ti</h2>
                         <p class="promo-card-text" data-i18n="promo_03_text">Participa en el sorteo de 2 sesiones de Spa
                             para 2 personas en los prestigiosos Hotel Senator y Hotel Cádiz Plaza. Entra en el sorteo
                             con cualquier servicio de tintorería.</p>
-                        <a href="mailto:info@puntosec.es" class="btn btn-primary"
-                            data-i18n="promo_btn_participate">Participar</a>
+                        <a href="index.html#horario" class="btn btn-primary" data-i18n="promo_btn_contact">Contáctanos</a>
                     </div>
                     <div class="promo-card-img">
-                        <img src="IMG/Un_descanso_para_ti__version_1 - Copy.png" alt="Sorteo Spa">
+                        <img src="IMG/pomelli_image (1).png" alt="Sorteo Spa">
                     </div>
                 </div>
 
@@ -144,8 +189,7 @@
                         <p class="promo-card-text" data-i18n="promo_04_text">Llevando cualquier prenda a lavar a Punto
                             Sec, participas automáticamente en el sorteo de una cena para dos en un exclusivo
                             restaurante premium de Cádiz.</p>
-                        <a href="mailto:info@puntosec.es" class="btn btn-primary" data-i18n="promo_btn_more">Más
-                            información</a>
+                        <a href="index.html#horario" class="btn btn-primary" data-i18n="promo_btn_contact">Contáctanos</a>
                     </div>
                     <div class="promo-card-img">
                         <img src="IMG/Savor_the_Night_on_Us_version_1.png" alt="Sorteo Cena Premium">
