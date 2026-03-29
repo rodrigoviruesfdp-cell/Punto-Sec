@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cookie_accept: "Aceptar",
             cookie_reject: "Rechazar",
             // New: Footer Labels & Rules
-            footer_rules_title: "Normas del establecimiento",
+            footer_rules_title: "Recomendaciones para el cliente",
             footer_labels_title: "Etiquetado para la limpieza de prendas",
             dry_cleaning_title: "Limpieza en Seco",
             wash_iron_title: "Agua y Planchado",
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sc_cta_text: "Para servicios especiales o presupuestos personalizados, nuestro equipo te atenderá con toda la atención que mereces.",
             sc_cta_btn_phone: "Llámanos ahora",
             sc_cta_btn_store: "Ver horarios y ubicación",
-            sc_cta_strip_hours: "Lunes–Viernes: 9:30–14:00 y 17:00–20:00",
+            sc_cta_strip_hours: "Lunes–Viernes: 9:30–14:00 y 17:30–20:30",
             sc_cta_strip_sat: "Sábados: 10:00–13:30",
             sc_cta_strip_addr: "Av. Andalucía 69, Cádiz",
             // New: Promotions
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sc_cta_text: "For special services or custom quotes, our team will provide the attention you deserve.",
             sc_cta_btn_phone: "Call us now",
             sc_cta_btn_store: "See hours & location",
-            sc_cta_strip_hours: "Monday–Friday: 9:30–14:00 & 17:00–20:00",
+            sc_cta_strip_hours: "Monday–Friday: 9:30–14:00 & 17:30–20:30",
             sc_cta_strip_sat: "Saturdays: 10:00–13:30",
             sc_cta_strip_addr: "Av. Andalucía 69, Cádiz",
             promo_status_no_active: "Inactive",
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sc_cta_text: "Für Sonderleistungen oder Angebote steht Ihnen unser Team zur Verfügung.",
             sc_cta_btn_phone: "Rufen Sie uns an",
             sc_cta_btn_store: "Öffnungszeiten sehen",
-            sc_cta_strip_hours: "Montag–Freitag: 9:30–14:00 & 17:00–20:00",
+            sc_cta_strip_hours: "Montag–Freitag: 9:30–14:00 & 17:30–20:30",
             sc_cta_strip_sat: "Samstags: 10:00–13:30",
             sc_cta_strip_addr: "Av. Andalucía 69, Cádiz",
             promo_status_no_active: "Inaktiv",
@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sc_cta_text: "Pour des services spéciaux, notre équipe est à votre disposition.",
             sc_cta_btn_phone: "Appelez-nous",
             sc_cta_btn_store: "Voir horaires",
-            sc_cta_strip_hours: "Lundi–Vendredi: 9:30–14:00 & 17:00–20:00",
+            sc_cta_strip_hours: "Lundi–Vendredi: 9:30–14:00 & 17:30–20:30",
             sc_cta_strip_sat: "Samedis: 10:00–13:30",
             sc_cta_strip_addr: "Av. Andalucía 69, Cadiz",
             promo_status_no_active: "Inactif",
@@ -655,7 +655,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sc_cta_text: "有关特殊服务或定制报价，我们将竭诚为您服务。",
             sc_cta_btn_phone: "立即致电",
             sc_cta_btn_store: "查看营业时间",
-            sc_cta_strip_hours: "周一–周五: 9:30–14:00 和 17:00–20:00",
+            sc_cta_strip_hours: "周一–周五: 9:30–14:00 和 17:30–20:30",
             sc_cta_strip_sat: "周六: 10:00–13:30",
             sc_cta_strip_addr: "加的斯，Av. Andalucía 69",
             promo_status_no_active: "未激活",
@@ -833,8 +833,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let isOpen = false;
 
             if (currentDay >= 1 && currentDay <= 5) {
-                // Lunes a Viernes: 9:30-14:00 (9.5-14.0) y 17:00-20:00 (17.0-20.0)
-                if ((timeFloat >= 9.5 && timeFloat < 14.0) || (timeFloat >= 17.0 && timeFloat < 20.0)) {
+                // Lunes a Viernes: 9:30-14:00 (9.5-14.0) y 17:30-20:30 (17.5-20.5)
+                if ((timeFloat >= 9.5 && timeFloat < 14.0) || (timeFloat >= 17.5 && timeFloat < 20.5)) {
                     isOpen = true;
                 }
             } else if (currentDay === 6) {
