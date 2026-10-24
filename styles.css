@@ -1947,3 +1947,246 @@ textarea.form-control {
         padding: 0 10px;
     }
 }
+
+/* ============================================================
+   ¿Sabías esto? Modal
+   ============================================================ */
+.sabias-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 20, 50, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.sabias-modal-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.sabias-modal-card {
+    position: relative;
+    background: linear-gradient(145deg, #0a1628 0%, #0d2545 60%, #0a3060 100%);
+    border: 1px solid rgba(0, 185, 228, 0.25);
+    border-radius: 24px;
+    max-width: 780px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow:
+        0 0 0 1px rgba(0, 185, 228, 0.1),
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(0, 185, 228, 0.08);
+    animation: sabias-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,185,228,0.3) transparent;
+}
+
+@keyframes sabias-in {
+    from { opacity: 0; transform: scale(0.85) translateY(30px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.sabias-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    transition: background 0.25s ease, transform 0.25s ease;
+    z-index: 2;
+}
+
+.sabias-close-btn:hover {
+    background: rgba(0, 185, 228, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Header */
+.sabias-header {
+    text-align: center;
+    padding: 40px 40px 24px;
+    position: relative;
+}
+
+.sabias-header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,185,228,0.5), transparent);
+    margin-top: 24px;
+}
+
+.sabias-bulb-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #f9c74f, #f3722c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 1.8rem;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(249, 199, 79, 0.5);
+    animation: bulb-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes bulb-pulse {
+    0%, 100% { box-shadow: 0 0 30px rgba(249, 199, 79, 0.5); }
+    50%       { box-shadow: 0 0 50px rgba(249, 199, 79, 0.8); }
+}
+
+.sabias-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.sabias-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.55);
+    font-style: italic;
+}
+
+/* Facts grid */
+.sabias-facts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 24px 40px;
+}
+
+.sabias-fact {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 16px;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.sabias-fact:hover {
+    background: rgba(0, 185, 228, 0.1);
+    border-color: rgba(0, 185, 228, 0.3);
+    transform: translateY(-3px);
+}
+
+.sabias-fact--alert {
+    border-color: rgba(243, 114, 44, 0.25);
+    background: rgba(243, 114, 44, 0.06);
+}
+
+.sabias-fact--alert:hover {
+    background: rgba(243, 114, 44, 0.15);
+    border-color: rgba(243, 114, 44, 0.5);
+}
+
+.sabias-fact-icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(0, 185, 228, 0.25), rgba(0, 51, 102, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #00B9E4;
+}
+
+.sabias-fact--alert .sabias-fact-icon {
+    background: linear-gradient(135deg, rgba(243, 114, 44, 0.25), rgba(180, 60, 10, 0.3));
+    color: #f3722c;
+}
+
+.sabias-fact p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.sabias-fact p strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Footer CTA */
+.sabias-footer {
+    padding: 20px 40px 36px;
+    text-align: center;
+    position: relative;
+}
+
+.sabias-footer::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,185,228,0.4), transparent);
+    margin-bottom: 20px;
+}
+
+.sabias-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #00B9E4, #0077aa);
+    color: #fff;
+    padding: 13px 32px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 185, 228, 0.35);
+    font-family: 'Inter', sans-serif;
+}
+
+.sabias-cta-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 14px 35px rgba(0, 185, 228, 0.5);
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .sabias-facts-grid {
+        grid-template-columns: 1fr;
+        padding: 20px 20px;
+    }
+    .sabias-header {
+        padding: 32px 20px 18px;
+    }
+    .sabias-title {
+        font-size: 1.5rem;
+    }
+    .sabias-footer {
+        padding: 16px 20px 28px;
+    }
+}
